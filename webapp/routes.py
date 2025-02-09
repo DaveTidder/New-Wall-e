@@ -1,4 +1,4 @@
-from flask import render_template, url_for, flash, redirect
+from flask import render_template, request, url_for, flash, redirect
 from webapp import app
 from webapp.models import Platform
 #from webapp.models import Message
@@ -101,7 +101,7 @@ def about():
 #     return render_template('main.html', **templateData)
 
 #@app.route("/control/<action>")
-@app.route("/control")
+@app.route("/control", methods=['GET','POST'])
 def control():
     # if action == "forwards":   # If the action part of the URL is "on," execute the code indented below:
     #     # I2C message forwards
@@ -109,6 +109,9 @@ def control():
     # if action == "backwards":
     #    # I2C message forwards
     message = "My Message "
+    if request.method == 'POST':
+        name = request.form.get['name']
+        print(name)
 
     templateData = {
         'title' : 'Control',

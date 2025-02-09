@@ -1,57 +1,58 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="col-sm-12 text-center">   <!-- start column (control.html) -->
+    <div class="col-sm-12 submit-center">   <!-- start column (control.html) -->
       <div>
-        <h3>Use <img src="{{ url_for('static', filename='icons/bi-arrows-move.svg') }}" > below to control direction</i></h3>
+        <h3>Use <img src="{{ url_for('static', filename='fonts/bi-arrows-move.svg') }}" > below to control direction</i></h3>
       </div>
 
       <div class="col-sm-12 text-center">   <!-- start column (control.html) -->
         <h3>Direction: </h3>
+        <i class="bi-alarm" style="font-size: 2rem; color: cornflowerblue;"></i>
+        <div>
+          {% if name %}
+   		      <h2>{{ name }}</h2>
+          {% endif %}  
+        </div>
 
       </div>
       <div class="icon">   <!-- start icons div (control.html) -->
-        <div>   <!-- start top row icons (control.html) -->
-          <input type="button" class="btn btn-default btn-lg" id='nw'>
-            <img src="{{ url_for('static', filename='icons/bi-arrow-up-left-square.svg') }}" >
-            <!-- <i class="bi-arrow-up-left-square"></i> -->
-          </input>
-          <input type="button" class="btn btn-default btn-lg" id='n'>
-            <img src="{{ url_for('static', filename='icons/bi-arrow-up-square.svg') }}" >
-          </input>
-          <input type="button" class="btn btn-default btn-lg" id='ne'>
-            <img src="{{ url_for('static', filename='icons/bi-arrow-up-right-square.svg') }}" >
-            <!-- <i class="bi-arrow-up-right-square"></i> -->
-          </input>
-        </div>
-        <div>   <!-- start middle row icons (control.html) -->
-            <input type="button" class="btn btn-default btn-lg" id='w'>
-            <img src="{{ url_for('static', filename='icons/bi-arrow-left-square.svg') }}" >
-            <!-- <i class="icon bi-arrow-left-square"></i> -->
-          </input>
-          <input type="button" class="btn btn-default btn-lg" id='stop'>
-            <img src="{{ url_for('static', filename='icons/bi-stop-btn.svg') }}" >
-            <!-- <i class="icon bi-stop-btn"></i> -->
-          </input>
-          <input type="button" class="btn btn-default btn-lg" id='e'>
-            <img src="{{ url_for('static', filename='icons/bi-arrow-right-square.svg') }}" >
-            <!-- <i class="icon bi-arrow-right-square"></i> -->
-          </input>
-        </div>
-        <div>   <!-- start bottom row icons (control.html) -->
-          <input type="button" class="btn btn-default btn-lg" id='sw'>
-            <img src="{{ url_for('static', filename='icons/bi-arrow-down-left-square.svg') }}" >
-            <!-- <i class="bi-arrow-down-left-square"></i> -->
-          </input>
-          <input type="button" class="btn btn-default btn-lg" id='s'>
-            <img src="{{ url_for('static', filename='icons/bi-arrow-down-square.svg') }}" >
-            <!-- <i class="bi-arrow-down-square"></i> -->
-          </input>
-          <input type="button" class="btn btn-default btn-lg" id='se'>
-            <img src="{{ url_for('static', filename='icons/bi-arrow-down-right-square.svg') }}" >
-            <!-- <i class="bi-arrow-down-right-square"></i> -->
-          </input>
-        </div>
+        
+        <form action="control" method="POST">
+          <div>   <!-- start top row icons (control.html) -->
+            <input type="button" class="btn btn-default btn-lg bi-arrow-up-left-square" id='2' name='2'>
+              
+            </input>
+            <input type="text" class="btn btn-default btn-lg" id='1' name='1'>
+              <span class="bi-arrow-up-square"></span>
+            </input>
+            <input type="text" class="btn btn-default btn-lg" id='3' name='3'>
+              <span class="bi-arrow-up-right-square"></span>
+            </input>
+          </div>
+          <div>   <!-- start middle row icons (control.html) -->
+              <input type="text" class="btn btn-default btn-lg" id='4' name='4'>
+              <span class="icon bi-arrow-left-square"></span>
+            </input>
+            <input type="text" class="btn btn-default btn-lg" id='0' name='0'>
+              <span class="icon bi-stop-btn"></span>
+            </input>
+            <input type="text" class="btn btn-default btn-lg" id='5' name='5'>
+              <span class="icon bi-arrow-right-square"></span>
+            </input>
+          </div>
+          <div>   <!-- start bottom row icons (control.html) -->
+            <input type="text" class="btn btn-default btn-lg" id='6' name='6'>
+              <span class="bi-arrow-down-left-square"></span>
+            </input>
+            <input type="text" class="btn btn-default btn-lg" id='7' name='7'>
+              <span class="bi-arrow-down-square"></span>
+            </input>
+            <input type="text" class="btn btn-default btn-lg" id='8' name='8'>
+              <span class="bi-arrow-down-right-square"></span>
+            </input>
+          </div>
+        </form>
       </div>   <!-- end icons div (control.html) -->
     </div>   <!-- end column (control.html) -->
 {% endblock %}
