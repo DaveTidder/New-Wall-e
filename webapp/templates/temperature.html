@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="col-sm-6 text-center">   <!-- start column -->
+        <h3>CPU temperature:</h3>
+        <p>{{cputemp}} &deg; C</p>
+    </div>   <!-- end column -->
+    <div class="col-sm-6 text-center">   <!-- start column -->
+        <h3>Weather:</h3>
+        <p>The temperature now is: {{temperature_c}} &deg; C</p>
+        <p>The humidity is: {{humidity}}%</p>
+    </div>   <!-- end column -->
+{% endblock %}

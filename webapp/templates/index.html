@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class='row'>
+        <div class="col-sm-4 text-center">   <!-- start column -->
+            <h3>Device Listing and Status</h3>
+
+            {% for pin in pins %}
+                {% if pins[pin].state == true %}
+			<div class="alert alert-success" role="alert">
+				The {{ pins[pin].name }} is currently <b>on</b> (<a href="/{{pin}}/off">turn off</a>)</div>
+               	{% else %}
+			<div class="alert alert-warning" role="alert">
+			The {{ pins[pin].name }} is currently <b>off</b> (<a href="/{{pin}}/on">turn on</a>)</div>
+                {% endif %}
+            {% endfor %}
+
+            {% if message %}
+   		<h2>{{ message }}</h2>
+            {% endif %}                
+        </div>   <!-- end column -->
+    </div>   <!-- end row -->
+{% endblock %}

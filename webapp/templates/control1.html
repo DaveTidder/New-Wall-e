@@ -1,0 +1,23 @@
+<!-- Control page -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <meta http-equiv="refresh" content="5; url=/">
+    <div class='row'>
+        <div class="col-sm-4 text-center">   <!-- start column -->
+            <h3>Click buttons to control direction</h3>
+			<div class="alert alert-success" role="alert">
+				<a href="/{{control}}/forwards">Move<b> forward</b></a>
+            </div>
+
+			<div class="alert alert-warning" role="alert">
+			    <a href="/{{control}}/backwards">Move<b> forward</b></a>
+            </div>
+
+            {% if message %}
+   		<h2>{{ message }}</h2>
+            {% endif %}                
+        </div>   <!-- end column -->
+    </div>   <!-- end row -->
+{% endblock %}

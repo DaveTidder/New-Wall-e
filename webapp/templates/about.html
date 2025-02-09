@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="col-sm-12 text-center">   <!-- start column -->
+        <h3>Motive Unit:</h3>
+                <p>The base consists of an Arduino Uno based board with in built motor control.</p>
+                <p>This board is supplied by DF Robot</p>
+                <p>The language used is C++ Arduino code. This provides the automated control of the motors via the Ultra Sonic sensor providing distance detection</p>
+                <p>that has been used for the </p>
+    </div>   <!-- end column -->
+
+    <div class="col-sm-12 text-center">   <!-- start column -->
+        <h3>Main Processor:</h3>
+                <p>The 'Brain' of Wall-e is provided by a Raspberry Pi Zero W board</p>
+                <p>The programming language used is a Python 3 script using a Flask Framework for the API</p>
+                <p>Needed to use Apache2 as the webserver to be able to use WSGI. Tried lighttpd but was unable to get lip WSGI to work.</p>
+                <p>Added 'www-data' user to 'sudoers' file and also 'gpio' Group to prevent errors with permissions executing the python script as root access is required for GPIO functions.</p>
+    </div>   <!-- end column -->
+
+    <div class="col-sm-12 text-center">   <!-- start column -->
+        <h3>Code Snippets:</h3>
+                <p>http://mattrichardson.com/Raspberry-Pi-Flask/index.html</p>
+                <p>https://flask.palletsprojects.com/en/2.0.x/</p>
+                <p>Access Point:
+                    https://raspberrypi.stackexchange.com/questions/89803/access-point-as-wifi-router-repeater-optional-with-bridge
+                    https://raspberrypi.stackexchange.com/questions/108592/use-systemd-networkd-for-general-networking/108593#108593
+
+                    HostAPD
+                    https://www.raspberryconnect.com/projects/65-raspberrypi-hotspot-accesspoints/168-raspberry-pi-hotspot-access-point-dhcpcd-method
+                    DNSMasq
+
+                    https://thepi.io/how-to-use-your-raspberry-pi-as-a-wireless-access-point/
+
+
+
+                </p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi debitis itaque tempore, dolorum laboriosam in, aut, tempora beatae nemo laborum voluptas natus eos sunt sed amet et? Nihil, blanditiis eius.</p>
+    </div>   <!-- end column -->
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="col-sm-12 text-center">   <!-- start column (control.html) -->
+      <div>
+        <h3>Use <img src="{{ url_for('static', filename='icons/bi-arrows-move.svg') }}" > below to control direction</i></h3>
+      </div>
+
+      <div class="col-sm-12 text-center">   <!-- start column (control.html) -->
+        <h3>Direction: </h3>
+
+      </div>
+      <div class="icon">   <!-- start icons div (control.html) -->
+        <div>   <!-- start top row icons (control.html) -->
+          <input type="button" class="btn btn-default btn-lg" id='nw'>
+            <img src="{{ url_for('static', filename='icons/bi-arrow-up-left-square.svg') }}" >
+            <!-- <i class="bi-arrow-up-left-square"></i> -->
+          </input>
+          <input type="button" class="btn btn-default btn-lg" id='n'>
+            <img src="{{ url_for('static', filename='icons/bi-arrow-up-square.svg') }}" >
+          </input>
+          <input type="button" class="btn btn-default btn-lg" id='ne'>
+            <img src="{{ url_for('static', filename='icons/bi-arrow-up-right-square.svg') }}" >
+            <!-- <i class="bi-arrow-up-right-square"></i> -->
+          </input>
+        </div>
+        <div>   <!-- start middle row icons (control.html) -->
+            <input type="button" class="btn btn-default btn-lg" id='w'>
+            <img src="{{ url_for('static', filename='icons/bi-arrow-left-square.svg') }}" >
+            <!-- <i class="icon bi-arrow-left-square"></i> -->
+          </input>
+          <input type="button" class="btn btn-default btn-lg" id='stop'>
+            <img src="{{ url_for('static', filename='icons/bi-stop-btn.svg') }}" >
+            <!-- <i class="icon bi-stop-btn"></i> -->
+          </input>
+          <input type="button" class="btn btn-default btn-lg" id='e'>
+            <img src="{{ url_for('static', filename='icons/bi-arrow-right-square.svg') }}" >
+            <!-- <i class="icon bi-arrow-right-square"></i> -->
+          </input>
+        </div>
+        <div>   <!-- start bottom row icons (control.html) -->
+          <input type="button" class="btn btn-default btn-lg" id='sw'>
+            <img src="{{ url_for('static', filename='icons/bi-arrow-down-left-square.svg') }}" >
+            <!-- <i class="bi-arrow-down-left-square"></i> -->
+          </input>
+          <input type="button" class="btn btn-default btn-lg" id='s'>
+            <img src="{{ url_for('static', filename='icons/bi-arrow-down-square.svg') }}" >
+            <!-- <i class="bi-arrow-down-square"></i> -->
+          </input>
+          <input type="button" class="btn btn-default btn-lg" id='se'>
+            <img src="{{ url_for('static', filename='icons/bi-arrow-down-right-square.svg') }}" >
+            <!-- <i class="bi-arrow-down-right-square"></i> -->
+          </input>
+        </div>
+      </div>   <!-- end icons div (control.html) -->
+    </div>   <!-- end column (control.html) -->
+{% endblock %}
